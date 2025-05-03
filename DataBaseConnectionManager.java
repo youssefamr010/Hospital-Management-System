@@ -1,9 +1,10 @@
+package AdminManagementModule;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataBaseConnectionManager {
-
     // put your database file path here
 
     private String dataBaseFilePath = "";
@@ -21,7 +22,8 @@ public class DataBaseConnectionManager {
     public Connection createDataBaseConnection (String dataBaseUrl) {
         try {
 
-        this.dataBaseConnection = DriverManager.getConnection(dataBaseUrl);
+            this.dataBaseConnection = DriverManager.getConnection(dataBaseUrl);
+            System.out.println("connected");
 
         } catch (SQLException e){
             System.out.println("data base error : ");
